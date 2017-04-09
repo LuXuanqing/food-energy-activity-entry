@@ -7,7 +7,7 @@ app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 // 启动服务器
-const port = 3000
+const port = 80
 const server = app.listen(port, () => {
   console.log(`food-energy is running at port ${port}`)
 })
@@ -15,7 +15,7 @@ const server = app.listen(port, () => {
 // mongoDB相关
 const MongoClient = require('mongodb').MongoClient
 const dbURL = 'mongodb://localhost:27017/food-energy'
-const collectionName = 'test'
+const collectionName = 'entry'
 
 // 静态资源
 app.use(express.static('public'))
