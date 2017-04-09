@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  text-align: center;
+  font-size: 62.5%;
+  font-family: 'Pingfang SC', "Helvetica Neue", Helvetica,  roboto, 'Droid Sans Fallback', 'Droid Sans',Tahoma, Arial, “Microsoft YaHei”, “微软雅黑”, Heiti, “黑体”, sans-serif;
+  color: #545454;
+}
+
+body {
+  padding-top: 9rem;
+}
+
+h1 {
+  font-size: 4.2rem;
+}
+h2 {
+  font-size: 2rem;
+  margin: .8rem auto .6rem;
+}
+p {
+  font-size: 1.6rem;
+}
+
+.wechat {
+  margin-top: 6rem;
+}
+img {
+  display: block;
+  margin: 0 auto;
+}
+.slogan {
+  width: 40%;
+  margin-bottom: 10px;
+}
+.qrcode {
+  width: 40%;
+}

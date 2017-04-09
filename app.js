@@ -15,6 +15,7 @@ const server = app.listen(port, () => {
 // mongoDB相关
 const MongoClient = require('mongodb').MongoClient
 const dbURL = 'mongodb://localhost:27017/food-energy'
+const collectionName = 'test'
 
 // 静态资源
 app.use(express.static('public'))
@@ -37,7 +38,7 @@ app.post('/food-energy/submit', (req, res) => {
       return
     }
     console.log('connected successfully')
-    let col = db.collection('test')
+    let col = db.collection(collectionName)
     // 增加数据
     col.insert(entry, (err, result) => {
       if (err) {
@@ -45,7 +46,7 @@ app.post('/food-energy/submit', (req, res) => {
         res.send('垃圾服务器又出错了，麻烦你再重试一次')
       } else {
         console.log(result)
-        res.json(result)
+        res.redirect('/food-energy/success.html')
       }
       db.close()
     })
@@ -59,7 +60,7 @@ app.get('/food-energy/query', (req, res) => {
       return
     }
     console.log('成功连接数据库')
-    let col = db.collection('test')
+    let col = db.collection(collectionName)
     col.find().toArray((err, docs) => {
       if (err) {
         console.log(err)
