@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>报名参加Food能量微电影大赛</title>
+  <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/entry.css">
+</head>
+<body>
+  <div class="container">
+    <div class="page-header">
+      <h1>Food能量<small>微电影大赛</small></h1>
+    </div>
+    <form action="/food-energy/submit" method="post">
+      <div class="form-group">
+        <label for="input-name">姓名/团队名称</label>
+        <input type="text" class="form-control" id="input-name" name="entry[name]" autofocus required>
+      </div>
+      <div class="form-group">
+        <label for="input-number">学号</label>
+        <input type="number" class="form-control" id="input-number" name="entry[number]">
+      </div>
+      <div class="form-group">
+        <label for="input-phone">联系电话</label>
+        <input type="tel" class="form-control" id="input-phone" name="entry[phone]" required>
+      </div>
+      <div class="form-group">
+        <label for="input-email">邮箱</label>
+        <input type="email" class="form-control" id="input-email" name="entry[email]">
+      </div>
+      <div class="form-group">
+        <label for="input-title">参赛题目</label>
+        <input type="text" class="form-control" id="input-title" name="entry[title]" required>
+      </div>
+      <div class="form-group">
+        <label for="input-netpan">网盘链接</label>
+        <input type="text" class="form-control" id="input-netpan" name="entry[netpan]" placeholder="请把作品上传至百度云等网盘">
+      </div>
+      <button class="btn btn-success btn-lg" type="submit">立即报名</button>
+    </form>
+  </div>
+</body>
+</html>
