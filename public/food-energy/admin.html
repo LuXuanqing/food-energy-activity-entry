@@ -18,6 +18,7 @@
           <th>姓名/团队</th>
           <th>联系方式</th>
           <th>作品</th>
+          <th>作品简介</th>
           <th>上传时间</th>
         </tr>
       </thead>
@@ -35,6 +36,7 @@
             <span>{{entry.title}}</span><br>
             <a v-bind:href="entry.netpan">网盘连接</a>
           </td>
+          <td>{{entry.desc}}</td>
           <td>
             <span>{{entry.date | getDate}}</span><br>
             <span>{{entry.date | getTime}}</span>
